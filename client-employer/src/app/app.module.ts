@@ -6,10 +6,12 @@ import * as angular from 'angular';
  */
 import { moduleName as coreModule } from './core/core.module';
 import { moduleName as contactsModule } from './contacts/contacts.module';
+import { moduleName as profilesModule } from '../../../module/profiles/profiles.module';
 
 export const moduleName =
   angular.module('application', [
     coreModule,
-    contactsModule
+    contactsModule,
+    profilesModule.name
   ])
   .name;

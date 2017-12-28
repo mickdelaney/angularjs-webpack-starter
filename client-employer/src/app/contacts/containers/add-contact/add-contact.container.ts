@@ -1,7 +1,8 @@
 import { ContactsService } from './../../services/contacts.service';
+import { Profile } from '../../../../module/lib/profile';
 
 class AddContactController {
-
+  profile: Profile;
   constructor(
       private contactsService: ContactsService,
       private $state: angular.ui.IStateService
@@ -12,6 +13,7 @@ class AddContactController {
   add(contact: { lastName: string, firstName: string })  {
     this.contactsService.add(contact);
     this.$state.go('contacts');
+    this.profile = new Profile('mick');
   }
 }
 

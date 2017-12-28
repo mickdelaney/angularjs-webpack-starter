@@ -1,4 +1,5 @@
 import { ContactsService } from './../../services/contacts.service';
+import { Profile } from '../../../../module/lib/profile';
 
 /**
  * Import the Component styles
@@ -7,7 +8,7 @@ import './contacts.container.scss';
 
 class ContactsController {
   contacts: { id: number, firstName: string, lastName: string }[];
-
+  profile: Profile;
   constructor(
       private contactsService: ContactsService
   ) {

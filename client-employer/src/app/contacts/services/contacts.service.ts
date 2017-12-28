@@ -1,13 +1,17 @@
+import { Profile } from '../../../../../module/lib/profile';
+
 export class ContactsService {
   static selector = 'contactsService';
   contacts: { id: number, lastName: string, firstName: string }[] = [
     { id: 1, firstName: 'John', lastName: 'Doe' }
   ];
 
+  profile: Profile;
   constructor(
       private $q: angular.IQService
   ) {
     'ngInject';
+    this.profile = new Profile('mick');
   }
 
   getAll() {

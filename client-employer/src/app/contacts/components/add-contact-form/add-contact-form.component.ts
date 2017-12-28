@@ -1,3 +1,5 @@
+import { Profile } from '../../../../module/lib/profile';
+
 class AddContactFormController {
   lastName: string;
   firstName: string;
@@ -13,6 +15,8 @@ class AddContactFormController {
     });
     this.lastName = '';
     this.firstName = '';
+
+    const profile = new Profile('mick');
   }
 }
 
